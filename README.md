@@ -6,7 +6,7 @@ Welcome to **Space app**! This is a fully functional example application generat
 
 This project serves as a practical guide to showcase AI-driven development, modular architecture, and rapid delivery with Hope AI.
 
-Browse the components on the [Bit Cloud example organization](https://bit.cloud/infinity) for browsing live preview and of the application components.
+Browse the components on the [Bit Cloud example organization](https://bit.cloud/corporate) for browsing live preview and of the application components.
 
 ---
 
