@@ -35,7 +35,7 @@ Follow these steps to get the Space corporate app running on your local machine.
 
 ### Prerequisites
 
-Make sure you have [Bit](https://bit.dev/docs/getting-started/installing-bit/installing-bit) and [MongoDB](https://www.mongodb.com/docs/manual/installation/) installed globally on your system.
+Make sure you have [Bit](https://bit.dev/docs/getting-started/installing-bit/installing-bit) installed globally on your system.
 
 ### Installation & Setup
 
