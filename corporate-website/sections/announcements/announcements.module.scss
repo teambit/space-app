@@ -1,0 +1,98 @@
+.container {
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--effects-gradients-space-effect);
+    z-index: 1;
+  }
+}
+
+.announcementsContainer {
+  width: 100%;
+  margin-top: var(--spacing-large);
+}
+
+.announcementItem {
+  box-sizing: border-box;
+  transition: transform var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out);
+  
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.gridItem {
+  flex: 1 1 calc(33.33% - var(--spacing-large));
+  min-width: 300px;
+}
+
+.listItem {
+  width: 100%;
+  margin-bottom: var(--spacing-medium);
+}
+
+.viewAllContainer {
+  text-align: center;
+  margin-top: var(--spacing-xl);
+}
+
+.viewAllLink {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-default);
+  font-weight: var(--typography-font-weight-semi-bold);
+  color: var(--colors-primary-default);
+  text-decoration: none;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: var(--borders-default-width) var(--borders-default-style) var(--colors-primary-default);
+  border-radius: var(--borders-radius-pill);
+  transition: all var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out);
+  
+  &::after {
+    content: "→";
+    margin-left: var(--spacing-xs);
+    transition: transform var(--interactions-transitions-duration-fast);
+  }
+  
+  &:hover {
+    background-color: var(--colors-primary-default);
+    color: var(--colors-text-inverse);
+    
+    &::after {
+      transform: translateX(4px);
+    }
+  }
+}
+
+.emptyState {
+  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-large);
+  background-color: var(--colors-surface-secondary);
+  border-radius: var(--borders-radius-medium);
+  box-shadow: var(--effects-shadows-small);
+}
+
+@media (max-width: 1024px) {
+  .gridItem {
+    flex: 1 1 calc(50% - var(--spacing-large));
+  }
+}
+
+@media (max-width: 480px) {
+  .announcementsContainer {
+    flex-direction: column;
+  }
+  
+  .gridItem {
+    flex: 1 1 100%;
+    margin-bottom: var(--spacing-default);
+  }
+}

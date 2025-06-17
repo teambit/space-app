@@ -1,0 +1,29 @@
+---
+description: A versatile and accessible paragraph component for consistent typography.
+labels: ['paragraph', 'typography', 'text']
+---
+
+The `Paragraph` component is designed to provide consistent and readable typography across Corporate Inc.'s website. It supports different sizes and can be rendered as various HTML elements.
+
+## Basic Usage
+
+The most straightforward use of the `Paragraph` component involves wrapping your text content within it. This ensures that the text adheres to the established typographic styles of the website.
+
+```jsx
+<Paragraph>
+  Corporate Inc. is dedicated to advancing space technology and making humanity a multi-planetary species.
+</Paragraph>
+```
+## Size Variations
+The component offers different size options to accommodate various design needs. You can use the `size` prop to specify the desired size, such as `large` for increased prominence or `small` for less emphasized text.
+```jsx
+<Paragraph size="large">
+  Our vision for Mars is ambitious yet achievable. We are developing advanced propulsion systems and life support technologies.
+</Paragraph>
+```
+## Custom Element Type
+You can also change the underlying HTML element rendered by the `Paragraph` component. By default, it renders as a `<p>` element, but you can use the `element` prop to render it as a `<div>` or `<span>`, allowing for greater flexibility in layout and styling.
+```jsx
+<Paragraph element="div">
+  Join us on this historic journey as we explore and develop sustainable solutions for Martian colonization.
+</Paragraph>

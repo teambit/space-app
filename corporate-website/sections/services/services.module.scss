@@ -1,0 +1,43 @@
+.servicesSection {
+  width: 100%;
+}
+
+.servicesGrid {
+  margin-top: var(--spacing-large);
+  width: 100%;
+}
+
+.serviceCardWrapper {
+  flex: 0 0 calc(33.333% - var(--spacing-large));
+  min-width: 300px;
+  max-width: 400px;
+  margin-bottom: var(--spacing-large);
+  
+  @media (max-width: 1024px) {
+    flex: 0 0 calc(50% - var(--spacing-default));
+  }
+  
+  @media (max-width: 480px) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.serviceCard {
+  height: 100%;
+  transition: transform var(--interactions-transitions-duration-medium) var(--interactions-transitions-easing-ease-out);
+  
+  &:hover {
+    transform: translateY(-8px);
+  }
+}
+
+.serviceTitle {
+  margin-bottom: var(--spacing-small);
+  color: var(--colors-text-primary);
+}
+
+.serviceDescription {
+  color: var(--colors-text-secondary);
+  margin-bottom: 0;
+}

@@ -1,0 +1,49 @@
+---
+description: A visually impactful hero section component for Corporate Inc.'s website.
+labels: ['hero', 'section', 'corporate']
+---
+
+The `Hero` component is designed to be a prominent feature on landing pages, providing an engaging introduction to your content. It includes a title, description, background image, and a call-to-action button.
+
+## Basic Usage
+
+This example demonstrates the basic implementation of the `Hero` component with a title, description, image, and CTA button.
+
+```jsx
+<Hero
+  title="Pioneering Mars: Humanity's Next Frontier"
+  description="Corporate Inc. is at the vanguard of space technology, developing innovative solutions to establish a thriving human civilization on Mars. Join us as we shape the future of interplanetary exploration."
+  imageUrl="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?ixid=M3w3MDc2NDF8MHwxfHNlYXJjaHw1fHxzcGFjZSUyMHRlY2hub2xvZ3klMjBtYXJzJTIwY29sb25pemF0aW9ufGVufDF8MHx8Ymx1ZXwxNzQ3MjI0NDk5fDA&ixlib=rb-4.1.0"
+  imageAlt="SpaceX Falcon Heavy Demo Mission launching towards the sky"
+  ctaText="Explore Our Mission"
+  ctaUrl="/mission"
+  onCtaClick={() => console.log('Explore Our Mission clicked')}
+/>
+```
+## Dark Overlay Variant
+The `darkOverlay` variant adds a dark gradient overlay to the image, improving text visibility on lighter images.
+```jsx
+<Hero
+  title="Innovate. Explore. Colonize."
+  description="Our vision extends beyond Earth. We're building the technologies that will transport humanity to Mars and sustain life on a new world. Witness the dawn of a new era."
+  imageUrl="https://images.unsplash.com/photo-1516801967339-cb50a3ce7781?ixid=M3w3MDc2NDF8MHwxfHNlYXJjaHw4fHxzcGFjZSUyMHRlY2hub2xvZ3klMjBtYXJzJTIwY29sb25pemF0aW9ufGVufDF8MHx8Ymx1ZXwxNzQ3MjI0NDk5fDA&ixlib=rb-4.1.0"
+  imageAlt="Soyuz rocket launch trail at night"
+  ctaText="Discover Our Technologies"
+  ctaUrl="/technology"
+  variant="darkOverlay"
+  onCtaClick={() => console.log('Discover Our Technologies clicked')}
+/>
+```
+## Split Layout Variant
+The `split` variant divides the hero section into two parts: content on the left and the image on the right. This layout is ideal for emphasizing the content while still providing a visual element.
+```jsx
+<Hero
+  title="Join the Martian Endeavor"
+  description="Corporate Inc. seeks brilliant minds and bold spirits to contribute to our Mars colonization program. From engineers to scientists, your expertise can help build a new home for humanity."
+  imageUrl="https://images.unsplash.com/photo-1484600899469-230e8d1d59c0?ixid=M3w3MDc2NDF8MHwxfHNlYXJjaHw3fHxzcGFjZSUyMHRlY2hub2xvZ3klMjBtYXJzJTIwY29sb25pemF0aW9ufGVufDF8MHx8Ymx1ZXwxNzQ3MjI0NDk5fDA&ixlib=rb-4.1.0"
+  imageAlt="Falcon 9 rocket launching with a beautiful sky backdrop"
+  ctaText="View Open Positions"
+  ctaUrl="/careers"
+  variant="split"
+  onCtaClick={() => console.log('View Open Positions clicked')}
+/>

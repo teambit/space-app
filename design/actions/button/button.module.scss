@@ -1,0 +1,84 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-default);
+  font-weight: var(--typography-font-weight-medium);
+  border-radius: var(--borders-radius-medium);
+  border: none;
+  cursor: var(--interactions-cursor-pointer);
+  padding: var(--spacing-small) var(--spacing-medium);
+  transition: 
+    background-color var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out),
+    transform var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out),
+    box-shadow var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  
+  &:focus {
+    outline: 2px solid var(--borders-focus-color);
+    outline-offset: var(--borders-focus-offset);
+  }
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--effects-shadows-small);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  &:disabled {
+    opacity: var(--effects-opacity-disabled);
+    cursor: var(--interactions-cursor-disabled);
+    pointer-events: none;
+  }
+}
+
+.primary {
+  background-color: var(--colors-primary-default);
+  color: var(--colors-text-inverse) !important;
+  
+  &:hover {
+    background-color: var(--colors-primary-hover);
+  }
+  
+  &:active {
+    background-color: var(--colors-primary-active);
+  }
+}
+
+.secondary {
+  background-color: var(--colors-secondary-default);
+  color: var(--colors-text-inverse) !important;
+  
+  &:hover {
+    background-color: var(--colors-secondary-hover);
+  }
+  
+  &:active {
+    background-color: var(--colors-secondary-active);
+  }
+}
+
+.tertiary {
+  background-color: transparent;
+  color: var(--colors-tertiary-default);
+  border: var(--borders-default-width) var(--borders-default-style) var(--colors-tertiary-default);
+  
+  &:hover {
+    background-color: var(--colors-surface-tertiary);
+    color: var(--colors-tertiary-hover);
+    border-color: var(--colors-tertiary-hover);
+  }
+  
+  &:active {
+    background-color: var(--colors-surface-tertiary);
+    color: var(--colors-tertiary-active);
+    border-color: var(--colors-tertiary-active);
+  }
+}

@@ -1,0 +1,33 @@
+.paragraph {
+  margin: 0 0 1.5rem 0;
+  color: var(--colors-text-primary);
+  font-family: var(--typography-font-family);
+  line-height: var(--typography-line-height-base);
+  letter-spacing: var(--typography-letter-spacing-normal);
+  font-weight: var(--typography-font-weight-regular);
+  transition: color var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out);
+  max-width: 70ch;
+}
+
+.large {
+  font-size: var(--typography-sizes-body-large);
+}
+
+.default {
+  font-size: var(--typography-sizes-body-default);
+}
+
+.small {
+  font-size: var(--typography-sizes-body-small);
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  .paragraph {
+    max-width: 100%;
+  }
+  
+  .large {
+    font-size: var(--typography-sizes-body-default);
+  }
+}

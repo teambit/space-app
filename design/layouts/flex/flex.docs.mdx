@@ -1,0 +1,35 @@
+---
+description: A flexbox layout component for arranging elements in rows and columns.
+labels: ['flex', 'layout']
+---
+
+The `Flex` component provides a flexible and efficient way to lay out, align, and distribute space among items in a container, even when their size is unknown or dynamic.
+
+## Basic Row Flex
+
+This example demonstrates the default behavior of the `Flex` component, which arranges items in a row.
+
+```jsx
+<Flex>
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</Flex>
+```
+## Column Flex with Gap and Alignment
+This example shows how to use the `direction`, `gap`, and `align` props to create a column layout with a medium gap between items and center alignment.
+```jsx
+<Flex direction="column" gap="medium" align="center">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</Flex>
+```
+## Justify Content Space Between
+This example demonstrates how to use the `justify` prop to distribute space between items in a row, pushing the first item to the start and the last item to the end of the container.
+```jsx
+<Flex justify="space-between">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</Flex>

@@ -1,0 +1,35 @@
+---
+description: A Github icon component.
+labels: ['icon', 'github']
+---
+
+The GithubIcon component displays the Github logo. It is based on the createIcon base component.
+
+## Basic Github Icon
+
+This example shows the default Github icon.
+
+```jsx
+<GithubIcon />
+```
+## Sized and Colored Github Icons
+This example demonstrates how to customize the size and color of the Github icon.
+```jsx
+<div>
+  <GithubIcon size={36} color="var(--colors-primary-default)" />
+  <GithubIcon size={48} color="var(--colors-secondary-default)" />
+  <GithubIcon size={64} color="var(--colors-text-primary)" />
+  <GithubIcon color="#FF5733" />
+</div>
+```
+## Interactive Github Icon
+This example shows an interactive Github icon that changes color on hover and displays an alert on click.
+```jsx
+<GithubIcon
+  size={48}
+  onClick={() => alert('Github Icon Clicked!')}
+  role="button"
+  tabIndex={0}
+  aria-label="Visit Corporate Inc. on Github"
+  style={{ cursor: 'pointer' }}
+/>

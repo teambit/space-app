@@ -1,0 +1,33 @@
+---
+description: A text input component for Corporate Inc.'s website, styled for a modern, high-tech aesthetic.
+labels: ['text-input', 'form', 'input']
+---
+
+## Basic Usage
+This example demonstrates the basic usage of the `TextInput` component with a default text type and a placeholder.
+
+```jsx
+<TextInput id="basic-input" name="basic" placeholder="Enter text here" />
+```
+## Controlled Input
+Here's how to use `TextInput` in a controlled component scenario, managing its value via state.
+```jsx
+<>
+  <TextInput
+    id="controlled-input"
+    name="controlled"
+    value="Initial value"
+    onChange={(value) => console.log('New value:', value)}
+  />
+</>
+```
+## Input with Error State
+This example showcases the `TextInput` component in an error state, displaying an error message.
+```jsx
+<TextInput
+  id="error-input"
+  name="error"
+  error
+  errorMessage="This field is required"
+  placeholder="Enter text"
+/>

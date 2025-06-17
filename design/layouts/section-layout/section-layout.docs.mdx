@@ -1,0 +1,42 @@
+---
+description: A visually striking and adaptable page section component for Corporate Inc.'s website, designed to elevate content presentation.
+labels: ['section', 'layout', 'corporate']
+---
+
+## Basic Usage
+
+The `SectionLayout` component is designed to structure content sections on a webpage, providing consistent styling and layout.
+
+```jsx
+<SectionLayout
+  title="Section Title"
+  subtitle="A brief description of the section's content."
+>
+  <div>Content of the section goes here.</div>
+</SectionLayout>
+```
+This example demonstrates the basic usage of the `SectionLayout` component with a title, subtitle, and some content.
+## Centered Alignment
+You can center the content within the `SectionLayout` by using the `alignment` prop.
+```jsx
+<SectionLayout
+  title="Centered Title"
+  subtitle="This section's content is centered."
+  alignment="center"
+>
+  <div>Centered Content</div>
+</SectionLayout>
+```
+Setting `alignment` to `"center"` will apply the appropriate styles to center the title, subtitle, and content.
+## Full Width Section
+To create a section that spans the full width of the screen, use the `fullWidth` prop.
+```jsx
+<SectionLayout
+  title="Full Width Section"
+  subtitle="This section stretches across the entire screen."
+  fullWidth={true}
+>
+  <div>Full Width Content</div>
+</SectionLayout>
+```
+Setting `fullWidth` to `true` will remove the maximum width constraint, allowing the section to fill the screen.

@@ -1,0 +1,69 @@
+---
+description: Display recent news and updates with a focus on clear and organized presentation.
+labels: ['announcements', 'section', 'news']
+---
+
+## Basic Usage
+
+This example demonstrates the basic usage of the `Announcements` component, displaying a title, subtitle, and a list of announcements.
+
+```jsx
+<Announcements
+  title="Recent News"
+  subtitle="Stay up-to-date with our latest articles and announcements."
+  announcements={[
+    {
+      title: "New Product Launch",
+      summary: "We are excited to announce the launch of our latest product.",
+      linkUrl: "/news/product-launch",
+    },
+    {
+      title: "Company Update",
+      summary: "An important update regarding our company's direction.",
+      linkUrl: "/news/company-update",
+    },
+  ]}
+/>
+```
+## Announcements with View All Link
+This example showcases how to include a "View All" link to navigate users to a dedicated page with all announcements.
+```jsx
+<Announcements
+  title="Company Announcements"
+  subtitle="Read all the latest news and press releases."
+  announcements={[
+    {
+      title: "Partnership Announcement",
+      summary: "We have formed a strategic partnership with a leading industry player.",
+      linkUrl: "/news/partnership",
+    },
+    {
+      title: "Financial Results",
+      summary: "Our latest financial results are now available.",
+      linkUrl: "/news/financials",
+    },
+  ]}
+  viewAllUrl="/all-news"
+  viewAllText="View All News"
+/>
+```
+## List Layout Announcements
+This example showcases announcements with List layout
+```jsx
+<Announcements
+  title="Mission updates"
+  subtitle="Chronological list of our recent achievements and mission milestones."
+  announcements={[
+    {
+      title: "Partnership Announcement",
+      summary: "We have formed a strategic partnership with a leading industry player.",
+      linkUrl: "/news/partnership",
+    },
+    {
+      title: "Financial Results",
+      summary: "Our latest financial results are now available.",
+      linkUrl: "/news/financials",
+    },
+  ]}
+  layout="list"
+/>

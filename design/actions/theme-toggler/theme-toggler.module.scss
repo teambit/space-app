@@ -1,0 +1,84 @@
+.toggler {
+  display: flex;
+  align-items: center;
+  background-color: var(--colors-surface-primary);
+  border-radius: var(--borders-radius-pill);
+  padding: var(--spacing-xxs) var(--spacing-xs);
+  cursor: var(--interactions-cursor-pointer);
+  border: var(--borders-default-width) var(--borders-default-style) var(--borders-default-color);
+  box-shadow: var(--effects-shadows-small);
+  transition: 
+    background-color var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-in-out),
+    transform var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-in-out),
+    box-shadow var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-in-out);
+  
+  &:hover {
+    box-shadow: var(--effects-shadows-medium);
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: inherit;
+  padding: var(--spacing-xs);
+  color: var(--colors-text-primary);
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-small);
+  font-weight: var(--typography-font-weight-medium);
+  transition: color var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-in-out);
+  
+  &:hover {
+    color: var(--colors-primary-hover);
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-right: var(--spacing-xxs);
+}
+
+.label {
+  margin-left: var(--spacing-xxs);
+}
+
+.compact {
+  padding: var(--spacing-xxs);
+  
+  .label {
+    display: none;
+  }
+}
+
+.pill {
+  border-radius: var(--borders-radius-pill);
+}
+
+.rounded {
+  border-radius: var(--borders-radius-medium);
+}
+
+.primary {
+  background-color: var(--colors-primary-default);
+  color: var(--colors-text-inverse) !important;
+  
+  .button {
+    color: var(--colors-text-inverse) !important;
+  }
+  
+  &:hover {
+    background-color: var(--colors-primary-hover);
+  }
+}

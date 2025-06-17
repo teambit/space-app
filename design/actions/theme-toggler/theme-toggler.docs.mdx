@@ -1,0 +1,34 @@
+---
+description: A theme toggler component for switching between light and dark themes.
+labels: ['theme', 'toggle', 'ui']
+---
+
+A theme toggler component that allows users to switch between light and dark themes, enhancing user experience on the Corporate Inc. website.
+
+## Basic Usage
+
+This example demonstrates the default theme toggler. It adapts to the current theme set by the CorporateTheme provider.
+
+```jsx
+<CorporateTheme initialTheme="light">
+  <ThemeToggler />
+</CorporateTheme>
+```
+## Compact Theme Toggler
+The `variant` prop can be set to `compact` to display only the icon, saving space in minimalist designs.
+```jsx
+<CorporateTheme initialTheme="dark">
+  <ThemeToggler variant="compact" />
+</CorporateTheme>
+```
+## Custom Labels and Icons
+Customize the labels and icons for a more personalized touch using the `lightLabel`, `darkLabel`, `lightIcon`, and `darkIcon` props.
+```jsx
+<CorporateTheme initialTheme="light">
+  <ThemeToggler
+    lightLabel="Day Mode"
+    darkLabel="Night Mode"
+    lightIcon={<SunIcon />}
+    darkIcon={<MoonIcon />}
+  />
+</CorporateTheme>

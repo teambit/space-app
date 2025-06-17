@@ -1,0 +1,91 @@
+---
+description: A theme for Corporate Inc., providing a modern, high-tech aesthetic suitable for a space technology company with light and dark modes.
+labels: ['react', 'design', 'theme', 'corporate']
+---
+
+## Get Started
+
+To incorporate the Corporate Inc. theme into your project, install the corporate theme. This theme offers design tokens for typography, colors, spacing, and sizes, perfect for a modern, high-tech look.
+
+```bash
+$ bit install @corporate-inc/design.corporate-theme
+```
+Alternatively, use PNPM or NPM:
+```bash
+$ npm install @corporate-inc/design.corporate-theme
+```
+## Usage
+Wrap your application with the `CorporateTheme` component to apply the theme across your app.
+```jsx
+function App() {
+  return (
+    <CorporateTheme>
+      <YourComponent />
+    </CorporateTheme>
+  );
+}
+```
+## Examples
+### Basic Theme Application
+This example shows how to wrap a simple component with the `CorporateTheme` to apply its styling.
+```jsx
+function MyComponent() {
+  return (
+    <div>
+      <h1>Welcome to Corporate Inc.</h1>
+      <p>Building the future in space.</p>
+    </div>
+  );
+}
+function App() {
+  return (
+    <CorporateTheme>
+      <MyComponent />
+    </CorporateTheme>
+  );
+}
+```
+### Toggling Between Light and Dark Modes
+The `CorporateTheme` supports both light and dark modes. This example demonstrates how to use the `useThemeController` hook to toggle between the modes.
+```jsx
+function ThemeToggle() {
+  const { themeMode, toggleTheme } = useThemeController();
+  return (
+    <button onClick={toggleTheme}>
+      Toggle to {themeMode === 'light' ? 'Dark' : 'Light'} Mode
+    </button>
+  );
+}
+function App() {
+  return (
+    <CorporateTheme>
+      <ThemeToggle />
+      <p>The current theme mode is {themeMode}.</p>
+    </CorporateTheme>
+  );
+}
+```
+### Customizing with Theme Tokens
+You can access and utilize the theme tokens within your components using the `useTheme` hook. This allows for dynamic styling based on the theme.
+```jsx
+function ThemedComponent() {
+  const theme = useTheme();
+  const style = {
+    backgroundColor: theme.colors.surface.primary,
+    color: theme.colors.text.primary,
+    padding: theme.spacing.medium,
+    fontFamily: theme.typography.fontFamily,
+  };
+  return (
+    <div style={style}>
+      This component is styled with the theme.
+    </div>
+  );
+}
+function App() {
+  return (
+    <CorporateTheme>
+      <ThemedComponent />
+    </CorporateTheme>
+  );
+}

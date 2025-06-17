@@ -1,0 +1,59 @@
+---
+description: A visually compelling and highly interactive Call-to-Action (CTA) button component for Corporate Inc.'s website, designed to grab user's attention and encourage clicks with a modern, high-tech design.
+labels: ['cta', 'button', 'call-to-action']
+---
+
+## Primary Call to Actions
+
+Illustrates the fundamental usage of the `CtaButton` component with different appearances and sizes to guide users towards key actions.
+
+```jsx
+<CtaButton onClick={() => alert('Launch sequence initiated!')}>
+  Launch Initiative
+</CtaButton>
+<CtaButton appearance="primary" size="large" onClick={() => alert('Exploring Martian Frontiers!')}>
+  Explore Martian Frontiers
+</CtaButton>
+<CtaButton appearance="primary" size="small" onClick={() => alert('Quick access panel opened!')}>
+  Access Mars Data
+</CtaButton>
+```
+## Varied Styles & Visual Effects
+Showcases the versatility of the `CtaButton` through different visual styles and interactive effects, enhancing the user experience with engaging animations and designs.
+```jsx
+<CtaButton appearance="secondary" size="large" onClick={() => alert('Viewing research data...')}>
+  View Research Data
+</CtaButton>
+<CtaButton appearance="tertiary" size="medium" onClick={() => alert('Contacting engineering team...')}>
+  Contact Engineering
+</CtaButton>
+<CtaButton appearance="primary" size="medium" animated={false} onClick={() => alert('Manual override activated.')}>
+  Manual Override
+</CtaButton>
+<CtaButton appearance="primary" pulsing={true} onClick={() => alert('Joining the mission!')}>
+  Join the Mission
+</CtaButton>
+<CtaButton appearance="secondary" glowing={true} size="large" onClick={() => alert('Hyperjump sequence activated!')}>
+  Activate Hyperjump
+</CtaButton>
+<CtaButton appearance="primary" pulsing={true} glowing={true} animated={true} size="large" onClick={() => alert('Going Interstellar!')}>
+  Go Interstellar!
+</CtaButton>
+```
+## Functional Variations (Links & States)
+Demonstrates the different functional aspects of the `CtaButton`, including navigation via links, integration with forms, and handling disabled states, providing a comprehensive toolkit for diverse application scenarios.
+```jsx
+<CtaButton href="/our-vision" appearance="primary">
+  Read Our Vision
+</CtaButton>
+<CtaButton href="https://www.nasa.gov" external={true} appearance="secondary">
+  NASA Archives
+</CtaButton>
+<CtaButton disabled={true} appearance="primary" onClick={() => alert('This should not fire!')}>
+  System Standby (Disabled)
+</CtaButton>
+<form onSubmit={(e) => { e.preventDefault(); alert('Application for Mars Program Submitted!'); }}>
+  <CtaButton type="submit" appearance="tertiary" size="medium">
+    Submit Mars Application
+  </CtaButton>
+</form>

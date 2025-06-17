@@ -1,0 +1,61 @@
+.heading {
+  margin: 0;
+  color: var(--colors-text-primary);
+  font-family: var(--typography-font-family);
+  font-weight: var(--typography-font-weight-semi-bold);
+  letter-spacing: var(--typography-letter-spacing-tight);
+  line-height: var(--typography-line-height-heading);
+  box-sizing: border-box;
+  
+  // Add transition for theme changes
+  transition: 
+    color var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out),
+    font-size var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out);
+}
+
+// Heading level styling
+.heading1 {
+  font-size: var(--typography-sizes-heading-h1);
+  margin-bottom: var(--spacing-medium);
+}
+
+.heading2 {
+  font-size: var(--typography-sizes-heading-h2);
+  margin-bottom: var(--spacing-default);
+}
+
+.heading3 {
+  font-size: var(--typography-sizes-heading-h3);
+  margin-bottom: var(--spacing-small);
+}
+
+.heading4 {
+  font-size: var(--typography-sizes-heading-h4);
+  margin-bottom: var(--spacing-xs);
+}
+
+.heading5 {
+  font-size: var(--typography-sizes-heading-h5);
+  margin-bottom: var(--spacing-xs);
+}
+
+.heading6 {
+  font-size: var(--typography-sizes-heading-h6);
+  margin-bottom: var(--spacing-xs);
+  font-weight: var(--typography-font-weight-medium);
+}
+
+// Responsive adjustments
+@media (max-width: 480px) {
+  .heading1 {
+    font-size: var(--typography-sizes-heading-h2);
+  }
+  
+  .heading2 {
+    font-size: var(--typography-sizes-heading-h3);
+  }
+  
+  .heading3 {
+    font-size: var(--typography-sizes-heading-h4);
+  }
+}

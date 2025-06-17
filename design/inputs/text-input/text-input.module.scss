@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--spacing-default);
+  width: 100%;
+}
+
+.label {
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-small);
+  font-weight: var(--typography-font-weight-medium);
+  color: var(--colors-text-secondary);
+  margin-bottom: var(--spacing-xxs);
+}
+
+.requiredMark {
+  margin-left: var(--spacing-xxs);
+  color: var(--colors-status-negative-default);
+}
+
+.input {
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-default);
+  color: var(--colors-text-primary);
+  background-color: var(--colors-surface-primary);
+  border: var(--borders-default-width) var(--borders-default-style) var(--borders-default-color);
+  border-radius: var(--borders-radius-medium);
+  padding: var(--spacing-small) var(--spacing-default);
+  width: 100%;
+  box-sizing: border-box; // Added to prevent overflow with padding/border
+  transition: 
+    border-color var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out),
+    box-shadow var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out);
+  outline: none;
+  
+  &:focus {
+    border-color: var(--colors-primary-default);
+    box-shadow: 0 0 0 var(--borders-focus-width) var(--colors-primary-default);
+  }
+
+  &:hover:not(:disabled) {
+    border-color: var(--colors-primary-hover);
+  }
+
+  &::placeholder {
+    color: var(--colors-text-tertiary);
+    opacity: 0.7;
+  }
+}
+
+.disabled {
+  opacity: var(--effects-opacity-disabled);
+  cursor: not-allowed;
+  background-color: var(--colors-surface-secondary);
+}
+
+.error {
+  border-color: var(--colors-status-negative-default);
+  
+  &:focus {
+    border-color: var(--colors-status-negative-default);
+    box-shadow: 0 0 0 var(--borders-focus-width) var(--colors-status-negative-subtle);
+  }
+}
+
+.errorMessage {
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-caption-default);
+  color: var(--colors-status-negative-default);
+  margin-top: var(--spacing-xxs);
+}

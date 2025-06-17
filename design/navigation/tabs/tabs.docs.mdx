@@ -1,0 +1,46 @@
+---
+description: A versatile Tabs component for organizing content into distinct sections.
+labels: ['tabs', 'navigation']
+---
+
+The Tabs component allows users to navigate between different sections of content within a single view. It supports various styles and configurations.
+
+## Basic Tabs
+
+The most basic implementation of the Tabs component, rendering a set of labeled tabs with corresponding content.
+
+```jsx
+const tabs = [
+  { label: 'Tab 1', content: <div>Content for Tab 1</div>, id: 'tab1' },
+  { label: 'Tab 2', content: <div>Content for Tab 2</div>, id: 'tab2' },
+];
+<Tabs tabs={tabs} />
+```
+## Styled Tabs
+This example demonstrates the different styling options available for the Tabs component, including "boxed", "underlined", and "pills" variants.
+```jsx
+const tabs = [
+  { label: 'Section 1', content: <div>Content for Section 1</div>, id: 'section1' },
+  { label: 'Section 2', content: <div>Content for Section 2</div>, id: 'section2' },
+];
+<div>
+  <Tabs tabs={tabs} variant="boxed" />
+  <Tabs tabs={tabs} variant="underlined" />
+  <Tabs tabs={tabs} variant="pills" />
+</div>
+```
+## Tabs with Alignment and Callback
+This example showcases how to align the tabs to the center or right and use the `onTabChange` callback to respond to tab selection events.
+```jsx
+const tabs = [
+  { label: 'Left', content: <div>Left Aligned Content</div>, id: 'left' },
+  { label: 'Center', content: <div>Center Aligned Content</div>, id: 'center' },
+  { label: 'Right', content: <div>Right Aligned Content</div>, id: 'right' },
+];
+function handleTabChange(index, id) {
+  console.log(`Tab changed to index: ${index}, id: ${id}`);
+}
+<div>
+  <Tabs tabs={tabs} alignment="center" onTabChange={handleTabChange} />
+  <Tabs tabs={tabs} alignment="right" onTabChange={handleTabChange} />
+</div>

@@ -1,0 +1,125 @@
+.contactPage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-large);
+  max-width: var(--layout-content-width);
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contactHeader {
+  margin-bottom: var(--spacing-large);
+  text-align: center;
+}
+
+.contactContent {
+  display: flex;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xxl);
+}
+
+.contactInfo {
+  flex: 1;
+  background-color: var(--colors-surface-primary);
+  padding: var(--spacing-large);
+  border-radius: var(--borders-radius-medium);
+  box-shadow: var(--effects-shadows-small);
+  box-sizing: border-box;
+}
+
+.infoItem {
+  margin-bottom: var(--spacing-medium);
+}
+
+.infoIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--colors-primary-default);
+  border-radius: var(--borders-radius-circle);
+  margin-right: var(--spacing-small);
+}
+
+.icon {
+  color: var(--colors-text-inverse);
+  width: 16px;
+  height: 16px;
+}
+
+.formSection {
+  flex: 2;
+  background-color: var(--colors-surface-primary);
+  padding: var(--spacing-large);
+  border-radius: var(--borders-radius-medium);
+  box-shadow: var(--effects-shadows-small);
+  box-sizing: border-box;
+}
+
+.formRow {
+  display: flex;
+  gap: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+}
+
+.formField {
+  flex: 1;
+}
+
+.messageField {
+  margin-bottom: var(--spacing-large);
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mapContainer {
+  width: 100%;
+  height: 300px;
+  background-color: var(--colors-surface-secondary);
+  border-radius: var(--borders-radius-medium);
+  overflow: hidden;
+  position: relative;
+}
+
+.mapImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mapPin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  color: var(--colors-primary-default);
+  font-size: 32px;
+}
+
+@media (max-width: 1024px) {
+  .contactContent {
+    flex-direction: column;
+  }
+  
+  .formSection, .contactInfo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .formRow {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactPage {
+    padding: var(--spacing-medium);
+  }
+}

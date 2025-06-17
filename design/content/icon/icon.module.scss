@@ -1,0 +1,15 @@
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  fill: currentColor;
+  flex-shrink: 0;
+  transition: 
+    fill var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out),
+    transform var(--interactions-transitions-duration-medium) var(--interactions-transitions-easing-ease-out);
+  
+  &:hover {
+    cursor: var(--interactions-cursor-pointer);
+  }
+}

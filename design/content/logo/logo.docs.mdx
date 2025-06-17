@@ -1,0 +1,47 @@
+---
+description: A versatile logo component for Corporate Inc. that can display a default logo SVG, custom SVG, or text-based logo with optional slogan.
+labels: ['logo', 'corporate']
+---
+
+The Logo component is designed for Corporate Inc.'s website, offering flexibility in displaying the company's brand. It supports a default SVG logo, custom SVG logos, and text-based logos with an optional slogan.
+
+## Default Logo
+
+Displays the Corporate Inc. logo with the default name and slogan.
+
+```jsx
+<Logo />
+```
+## Custom Text and Size
+Customize the logo with a different name, slogan, and size.
+```jsx
+<Logo 
+  name="Mars Colonizers Co." 
+  slogan="Building New Worlds" 
+  size={60} 
+  href="/about-us" 
+/>
+```
+```jsx
+<Logo 
+  name="Stellar Navigation" 
+  slogan="Guiding Your Journey Through Space" 
+  size={30} 
+  href="/services/navigation" 
+/>
+```
+## Minimal Logo
+Display only the SVG logo without any text.
+```jsx
+<Logo minimal={true} size={50} href="/minimal-home" />
+```
+## Custom SVG Logo
+Use a custom SVG logo by providing the `src` prop.
+```jsx
+<Logo 
+  src="https://storage.googleapis.com/static.bit.dev/extensions-icons/sparks.svg"
+  name="External Tech Division" 
+  slogan="Innovating with Partners" 
+  size={50} 
+  href="/partnerships"
+/>

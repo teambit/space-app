@@ -1,0 +1,47 @@
+---
+description: A responsive, configurable footer component for corporate websites.
+labels: ['footer', 'layout', 'navigation', 'corporate']
+---
+
+## Corporate Footer Component
+
+A responsive footer component for corporate websites, featuring configurable link sections, copyright information, social media links, and attribution to Unsplash photos.
+
+### Basic Footer
+
+This example shows the basic usage of the `Footer` component with default settings.
+
+```tsx
+<Footer />
+```
+### Customized Footer
+This example demonstrates how to customize the footer with specific links and copyright text.
+```tsx
+const sampleLinks = [ // Assuming FooterLinkType is globally available or imported in the full context
+  [
+    { title: 'Company', isHeading: true },
+    { title: 'About Us', url: '/about' },
+    { title: 'Careers', url: '/careers' }
+  ],
+  [
+    { title: 'Technology', isHeading: true },
+    { title: 'Mars Habitat', url: '/tech/habitat' },
+    { title: 'Propulsion', url: '/tech/propulsion' }
+  ]
+];
+<Footer
+  linkColumns={sampleLinks}
+  copyrightText="© 2024 Corporate Inc. Pioneering the future on Mars."
+/>
+```
+### Footer with Custom Content
+This example showcases how to add custom content to the footer, such as a newsletter signup section.
+```tsx
+<Footer>
+  <div style={{ padding: '16px', backgroundColor: '#f0f0f0', borderRadius: '4px' }}>
+    <h3>Subscribe to our newsletter</h3>
+    <p>Stay updated with our latest Mars technology developments</p>
+    <input type="email" placeholder="Your email address" />
+    <button>Subscribe</button>
+  </div>
+</Footer>

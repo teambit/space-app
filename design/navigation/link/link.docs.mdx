@@ -1,0 +1,35 @@
+---
+description: A link component for Corporate Inc.'s website, supporting internal routing and external links.
+labels: ['link', 'navigation']
+---
+
+## Link Component
+
+The `Link` component is designed for seamless navigation within Corporate Inc.'s website and to external resources. It supports both internal routing using `react-router-dom` and standard external links.
+
+## Internal Links
+
+To create an internal link, simply provide a `href` that corresponds to a route within your React Router setup.
+
+```jsx
+<Link href="/careers">
+  Explore Career Opportunities
+</Link>
+```
+This will render a link that navigates the user to the `/careers` route within the application.
+## External Links
+For linking to external websites, set the `external` prop to `true` and provide the full URL in the `href` prop.
+```jsx
+<Link href="https://www.nasa.gov" external>
+  Visit NASA
+</Link>
+```
+This configuration automatically sets `target="_blank"` and `rel="noopener noreferrer"` for security and proper handling of external links.
+## Custom Styling
+You can apply custom styles to the `Link` component using the `className` prop.
+```jsx
+<Link href="/special-offer" className="highlight-link">
+  Check Out Our Special Offer!
+</Link>
+```
+Ensure that the class `highlight-link` is defined in your CSS or SCSS modules and imported appropriately.

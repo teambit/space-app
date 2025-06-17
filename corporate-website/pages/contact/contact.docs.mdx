@@ -1,0 +1,48 @@
+---
+description: A contact page component for the Corporate Inc. website, integrating a contact form for user inquiries.
+labels: ['contact', 'form', 'page']
+---
+
+## Component usage
+
+Use the component to create a contact page for your website. It includes a contact form and company information.
+
+```jsx
+<Contact />
+```
+### Basic Contact Form
+This example shows the basic usage of the Contact component. It renders a contact form with fields for name, email, phone, subject, and message, along with company contact information.
+```jsx
+<Contact />
+```
+### Contact Form with Custom Information
+This example demonstrates how to customize the contact information displayed on the page, such as office address, contact phone, contact email, and map image.
+```jsx
+<Contact
+  officeAddress="Mars Research Outpost Alpha, Valles Marineris Sector, Mars"
+  contactPhone="+MARS-OUTPOST-ALPHA-COMMS"
+  contactEmail="alpha.operations@corporateinc.mars"
+  mapImageUrl="https://images.unsplash.com/photo-1506703719100-a0f3b48c0f85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1024&q=80"
+/>
+```
+### Contact Form with Inquiry Submission Handling
+This example illustrates how to handle form submissions.  The `onSubmitForm` prop is used to pass a function that will be called when the form is submitted.  In this example, the form data is displayed in an alert.
+```jsx
+() => {
+  const handleMarsMissionInquiry = (formData) => {
+    const submissionDetails = `
+      New Mars Mission Inquiry:
+      --------------------------
+      Name: ${formData.firstName} ${formData.lastName}
+      Email: ${formData.email}
+      Phone: ${formData.phone || 'Not provided'}
+      Subject: ${formData.subject}
+      Message: 
+      ${formData.message}
+      --------------------------
+      (Simulated submission - data not actually sent)
+    `;
+    alert(submissionDetails);
+  };
+  return <Contact onSubmitForm={handleMarsMissionInquiry} />;
+}

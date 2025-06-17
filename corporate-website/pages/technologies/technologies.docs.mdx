@@ -1,0 +1,48 @@
+---
+description: Showcases the key technologies used by Corporate Inc. in its space exploration efforts.
+labels: ['technologies', 'corporate']
+---
+
+The `Technologies` component highlights the innovative technologies Corporate Inc. is developing to facilitate space exploration and colonization. It features a visually engaging layout with descriptions and images of various technologies.
+
+## Basic Usage
+
+This example demonstrates the basic usage of the `Technologies` component with default data.
+
+```jsx
+<Technologies />
+```
+## Custom Technologies
+This example shows how to pass custom technology data to the `Technologies` component. The component renders technology cards based on the provided data.
+```jsx
+const customTechnologiesData = [
+  {
+    id: 'tech-001',
+    title: 'Quantum Entanglement Communicators',
+    description: 'Revolutionizing interplanetary communication with instantaneous, secure data transmission across vast cosmic distances using principles of quantum entanglement.',
+    imageUrl: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    category: 'Communication',
+  },
+  {
+    id: 'tech-002',
+    title: 'Bio-Adaptive Terraforming Units',
+    description: 'Deployable, self-replicating units that analyze Martian soil and atmosphere, releasing tailored extremophile organisms to gradually terraform the environment.',
+    imageUrl: 'https://images.unsplash.com/photo-1570012759830-6f3510450012?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    category: 'Terraforming',
+  },
+];
+<Technologies technologies={customTechnologiesData} />
+```
+## Limited Technologies View
+This example demonstrates rendering a limited subset of technologies using the `Technologies` component.
+```jsx
+const limitedTechnologiesData = [
+  {
+    id: 'lt-001',
+    title: 'Fusion-Powered Interstellar Drive',
+    description: 'A compact fusion reactor powering a next-generation engine capable of sustained high-G acceleration, drastically reducing travel times within the solar system.',
+    imageUrl: 'https://images.unsplash.com/photo-1608178388197-9b11c1850068?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    category: 'Propulsion',
+  },
+];
+<Technologies technologies={limitedTechnologiesData} />

@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: var(--spacing-small);
+  max-width: fit-content;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-heading-h5);
+  font-weight: var(--typography-font-weight-bold);
+  color: var(--colors-text-primary);
+  margin: 0;
+  letter-spacing: var(--typography-letter-spacing-tight);
+  line-height: 1.2;
+}
+
+.slogan {
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-caption-default);
+  font-weight: var(--typography-font-weight-medium);
+  color: var(--colors-text-secondary);
+  margin: 0;
+  letter-spacing: var(--typography-letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.minimal {
+  max-width: 100%;
+}

@@ -1,0 +1,55 @@
+---
+description: 'The Corporate Inc. website application.'
+labels: ['app', 'react', 'corporate', 'website', 'mars']
+---
+
+# Corporate Website
+
+A React application for Corporate Inc., showcasing their space technology and vision to populate Mars.
+
+## Run the application
+
+Import the app and add the following config to your workspace.jsonc:
+
+```
+bit use corporate-website 
+```
+To run the app locally, run the following:
+```
+bit run corporate-website 
+```
+## Features
+- Responsive design for all device sizes
+- Modern UI with space-themed visuals
+- Information about Corporate Inc.'s technologies and Mars vision
+- Latest news and updates about the company's initiatives
+- Contact information and inquiry submission form
+## Pages
+- Home: Overview of Corporate Inc. and its mission
+- About Us: Company history, mission, and leadership team
+- Technologies: Cutting-edge technologies for Mars colonization
+- Mars Vision: The company's vision for Mars colonization
+- News: Latest updates and announcements
+- Contact: Get in touch with Corporate Inc.
+## Basic Usage
+This example shows the basic usage of the `CorporateWebsite` component. It renders the main layout with navigation and content areas.
+```jsx
+<CorporateWebsite />
+```
+## Custom Navigation Links
+This example demonstrates how to customize the navigation links in the header. You can pass an array of link objects with `label` and `href` properties to the `Header` component.
+```jsx
+const navigationLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'About Us', href: '/about' },
+  { label: 'Technologies', href: '/technologies' },
+  { label: 'Mars Vision', href: '/mars-vision' },
+  { label: 'News', href: '/news' },
+  { label: 'Contact', href: '/contact' }
+];
+<CorporateWebsite />
+```
+## Loading State
+This example showcases the loading state of the `CorporateWebsite` component. When the page is loading, a spinner is displayed.
+```jsx
+<CorporateWebsite />

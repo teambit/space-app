@@ -1,0 +1,37 @@
+---
+description: A LinkedIn icon component using a standard LinkedIn SVG icon.
+labels: ['icon', 'social', 'linkedin']
+---
+
+The `LinkedInIcon` component renders a LinkedIn logo SVG icon.  It is based on a base `Icon` component and is themeable and customizable.
+
+## Basic Usage
+
+The basic usage of the `LinkedInIcon` component renders the standard LinkedIn icon with default styling.
+
+```jsx
+<LinkedInIcon />
+```
+## Styled LinkedIn Icon
+You can customize the size and color of the `LinkedInIcon` component using the `size` and `color` props.
+```jsx
+<div>
+  <LinkedInIcon size={48} color="var(--colors-secondary-default)" />
+  <LinkedInIcon size={16} color="var(--colors-text-tertiary)" />
+  <LinkedInIcon size={32} color="#0077B5" />
+</div>
+```
+## Interactive LinkedIn Icon
+You can make the `LinkedInIcon` interactive by adding an `onClick` handler.  You can also add accessibility attributes like `role`, `tabIndex`, `onKeyDown`, and `aria-label`.
+```jsx
+<LinkedInIcon
+  size={40}
+  color="var(--colors-primary-hover)"
+  onClick={() => alert('LinkedIn icon clicked!')}
+  role="button"
+  tabIndex={0}
+  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') alert('LinkedIn icon clicked!') }}
+  aria-label="Visit our LinkedIn Profile"
+  style={{ cursor: 'var(--interactions-cursor-pointer)' }}
+  title="Visit our LinkedIn Profile (Click me!)"
+/>

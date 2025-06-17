@@ -1,0 +1,31 @@
+.customCallToAction {
+  background-color: var(--colors-primary-default);
+  color: var(--colors-text-inverse) !important; /* Ensure text color contrasts with background */
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-radius: var(--borders-radius-pill);
+  font-weight: var(--typography-font-weight-semi-bold);
+  text-decoration: none;
+  transition: background-color var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out),
+              transform var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out);
+
+  /* Remove the default underline effect from the base link style */
+  &::after {
+    display: none;
+  }
+  /* Remove the external icon if it somehow gets applied */
+  &::before {
+    display: none;
+  }
+
+  &:hover {
+    background-color: var(--colors-primary-hover);
+    color: var(--colors-text-inverse) !important;
+    transform: translateY(-2px);
+    box-shadow: var(--effects-shadows-small);
+  }
+
+  &:active {
+    background-color: var(--colors-primary-active);
+    transform: translateY(0);
+  }
+}

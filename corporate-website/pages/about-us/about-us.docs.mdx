@@ -1,0 +1,51 @@
+---
+description: The About Us page component for the Corporate Inc. website, detailing the organization's history and mission to populate Mars.
+labels: ['about-us', 'page']
+---
+
+## Basic Usage
+
+This example shows the basic usage of the `AboutUs` component with default data.
+
+```jsx
+<AboutUs />
+```
+
+## Custom Data
+This example demonstrates how to customize the `AboutUs` component with your own timeline items, mission cards, and team members.
+```jsx
+const customTimelineItems = [
+  {
+    year: '2024',
+    title: 'Project Phoenix Initiative Launched',
+    description: 'Corporate Inc. officially launched Project Phoenix, a focused initiative on developing advanced bio-domes for sustainable agriculture on Mars.',
+  },
+];
+const customMissionCards = [
+  {
+    title: 'Planetary Habitats',
+    description: 'Engineering resilient and adaptive habitats that provide safe and sustainable living conditions for Martian pioneers.',
+  },
+];
+const customTeamMembers = [
+  {
+    name: 'Dr. Aris Thorne',
+    role: 'Chief Futurist & Mars Visionary',
+    imageUrl: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+  },
+];
+<AboutUs
+  timelineItems={customTimelineItems}
+  missionCards={customMissionCards}
+  teamMembers={customTeamMembers}
+/>
+```
+
+## Minimal Content
+This example shows how the component renders when minimal or empty data is passed to it, which is useful for handling edge cases or initial loading states.
+```jsx
+<AboutUs
+  timelineItems={[]}
+  missionCards={[]}
+  teamMembers={[]}
+/>

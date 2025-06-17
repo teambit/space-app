@@ -1,0 +1,34 @@
+---
+description: A Mars vision page component for the Corporate Inc. website, detailing the company's vision and plans for populating Mars.
+labels: ['mars', 'vision', 'corporate', 'page']
+---
+
+## Basic Usage
+
+This example shows the basic rendering of the `MarsVision` component with default settings.
+
+```jsx
+<MarsVision />
+```
+## Styled MarsVision Page
+Here's an example of how to apply custom styles to the `MarsVision` component using inline styles and custom CSS classes.
+```jsx
+<style>
+  {`
+    .custom-mars-vision-wrapper {
+      box-shadow: var(--effects-shadows-x-large);
+    }
+  `}
+</style>
+<MarsVision
+  className="custom-mars-vision-wrapper"
+  style={{
+    border: '2px solid var(--colors-primary-default)',
+    padding: 'var(--spacing-medium)',
+  }}
+/>
+```
+## Mars Vision Page
+A more complex example demonstrating the full layout and content of the `MarsVision` component, including sections for vision, timeline, key technologies, and a call to action.
+```jsx
+<MarsVision />

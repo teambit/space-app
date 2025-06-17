@@ -1,0 +1,198 @@
+.technologiesPage {
+  font-family: var(--typography-font-family);
+  color: var(--colors-text-primary);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--layout-content-width);
+  margin: 0 auto;
+  padding: var(--spacing-medium);
+  box-sizing: border-box;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+  margin-bottom: var(--spacing-xxl);
+  padding: var(--spacing-large);
+  background-color: var(--colors-surface-primary);
+  border-radius: var(--borders-radius-medium);
+  box-shadow: var(--effects-shadows-small);
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  max-width: 800px;
+}
+
+.heroImageContainer {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: var(--borders-radius-medium);
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  transition: transform var(--interactions-transitions-duration-medium) var(--interactions-transitions-easing-ease-out);
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+.mission {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  margin-bottom: var(--spacing-xxl);
+}
+
+.technologiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-large);
+  margin-bottom: var(--spacing-xxl);
+}
+
+.futureOutlook {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+  margin-bottom: var(--spacing-xxl);
+  padding: var(--spacing-large);
+  background-color: var(--colors-surface-secondary);
+  border-radius: var(--borders-radius-medium);
+}
+
+.futureContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.futureImageContainer {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: var(--borders-radius-medium);
+}
+
+.futureImage {
+  width: 100%;
+  height: 100%;
+}
+
+.callToAction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-medium);
+  padding: var(--spacing-xxl) var(--spacing-large);
+  background: linear-gradient(
+    135deg,
+    var(--colors-primary-default) 0%,
+    var(--colors-secondary-default) 100%
+  );
+  border-radius: var(--borders-radius-large);
+  color: var(--colors-text-inverse) !important;
+}
+
+.callToAction h2 {
+  color: var(--colors-text-inverse) !important;
+}
+
+.callToAction p {
+  max-width: 700px;
+  color: var(--colors-text-inverse) !important;
+}
+
+.ctaButton {
+  margin-top: var(--spacing-large);
+  padding: var(--spacing-default) var(--spacing-large);
+  background-color: var(--colors-surface-background);
+  color: var(--colors-primary-default);
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-default);
+  font-weight: var(--typography-font-weight-bold);
+  border: none;
+  border-radius: var(--borders-radius-pill);
+  cursor: pointer;
+  box-shadow: var(--effects-shadows-medium);
+  transition: transform var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out),
+              box-shadow var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--effects-shadows-large);
+  }
+  
+  &:active {
+    transform: translateY(0);
+    box-shadow: var(--effects-shadows-small);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .heroContent {
+    flex: 1;
+  }
+  
+  .heroImageContainer {
+    flex: 1;
+    height: 500px;
+  }
+  
+  .futureOutlook {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .futureContent {
+    flex: 1;
+  }
+  
+  .futureImageContainer {
+    flex: 1;
+    height: 400px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .technologiesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .technologiesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: var(--spacing-small);
+  }
+  
+  .hero, 
+  .futureOutlook {
+    padding: var(--spacing-medium);
+  }
+  
+  .heroImageContainer,
+  .futureImageContainer {
+    height: 250px;
+  }
+}

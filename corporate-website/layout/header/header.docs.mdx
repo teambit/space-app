@@ -1,0 +1,66 @@
+---
+description: A responsive header component for Corporate Inc. website.
+labels: ['header', 'navigation']
+---
+
+# Header Component
+
+A responsive header component for Corporate Inc. website that displays a logo, navigation links, and call-to-action elements.
+
+## Component usage
+
+Display a header with navigation links:
+
+```tsx
+export function App() {
+  const links = [
+    { label: 'Mission', href: '/mission' },
+    { label: 'Technology', href: '/technology' },
+    { label: 'Mars Project', href: '/mars-project' }
+  ];
+  return (
+    <Header links={links} />
+  );
+}
+```
+## Adding custom actions
+Add custom call-to-action components to the header:
+```tsx
+const LoginButton = () => (
+  <a href="/login">Login</a>
+);
+const SignUpButton = () => (
+  <a href="/signup">Sign Up</a>
+);
+export function App() {
+  return (
+    <Header actions={[LoginButton, SignUpButton]} />
+  );
+}
+```
+## Customizing the logo
+Customize the logo with a name, slogan, and image:
+```tsx
+export function App() {
+  return (
+    <Header
+      logoName="Mars Initiative"
+      logoSlogan="Building the Future"
+      logoSrc="https://example.com/custom-logo.svg"
+      logoSize={50}
+    />
+  );
+}
+```
+## Using a notification banner
+Render a banner below the header navigation:
+```tsx
+export function App() {
+  return (
+    <Header>
+      <div style={{ backgroundColor: 'lightblue', padding: '10px', textAlign: 'center' }}>
+        Launching new Mars mission in 2024! <a href="/announcements">Learn more</a>
+      </div>
+    </Header>
+  );
+}

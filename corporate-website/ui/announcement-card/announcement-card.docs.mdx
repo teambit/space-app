@@ -1,0 +1,43 @@
+---
+description: An announcement card component for displaying news or updates.
+labels: ['card', 'announcement', 'news']
+---
+
+The `AnnouncementCard` component is designed to showcase news articles or press releases with a title, summary, formatted date, and a link to the full content.
+
+## Basic Announcement
+
+This example demonstrates a basic announcement card with a title, summary, date, and link.
+
+```jsx
+<AnnouncementCard
+  title="Mars Habitation Module Alpha: Online!"
+  summary="Corporate Inc. proudly announces the successful deployment and activation of the first sustainable habitat module on the Martian surface. This marks a significant milestone in our mission to populate Mars."
+  date="2042-10-28T10:00:00Z"
+  linkUrl="/news/mars-habitat-alpha-online"
+  linkText="Discover More"
+/>
+```
+## Announcement with Image
+This example shows an announcement card that includes an image to provide a visual context for the announcement.
+```jsx
+<AnnouncementCard
+  title="Breakthrough in Terraforming Technology Achieved"
+  summary="Our advanced research division has achieved a monumental breakthrough in atmospheric processing, significantly accelerating our timeline for creating a breathable Martian environment. This technology is key to long-term colonization."
+  date="2043-03-15T14:30:00Z"
+  linkUrl="/news/terraforming-breakthrough"
+  imageUrl="https://images.unsplash.com/photo-1610296669458-193205820a42?ixid=M3w3MDc2NDF8MHwxfHNlYXJjaHwxfHxtYXJzJTIwY29sb255JTIwZnV0dXJpc3RpY3xlbnwwfDB8fGJsYWNrfDE3MTY0NzQ2NTB8MA&ixlib=rb-4.0.3"
+/>
+```
+## Primary Announcement
+This example showcases a primary variant of the announcement card, suitable for highlighting important announcements.
+```jsx
+<AnnouncementCard
+  title="Join the Ares V Mission to Mars!"
+  summary="Applications are now open for the historic Ares V mission. Corporate Inc. is seeking visionary scientists, engineers, and pioneers to help establish our burgeoning Martian colony and shape the future of humanity."
+  linkUrl="/careers/ares-v-mission"
+  linkText="Apply Today"
+  imageUrl="https://images.unsplash.com/photo-1570032257806-7272438f38da?ixid=M3w3MDc2NDF8MHwxfHNlYXJjaHwxfHxtYXJzJTIwcm92ZXJ8ZW58MHwwfHxibGFja3wxNzE2NDc0NTY0fDA&ixlib=rb-4.0.3"
+  variant="primary"
+  date="2043-05-01T09:00:00Z"
+/>

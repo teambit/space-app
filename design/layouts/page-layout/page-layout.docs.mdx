@@ -1,0 +1,87 @@
+---
+description: A responsive page layout component with SEO meta injection and flexible content areas.
+labels: ['page layout', 'layout', 'SEO', 'responsive']
+---
+
+## Page Layout Component
+
+The `PageLayout` component provides a consistent structure for pages within Corporate Inc.'s website, ensuring a unified user experience and adhering to a modern, high-tech aesthetic. It supports injecting SEO meta elements, incorporating side navigation, and displaying tabbed content.
+
+### Basic Usage
+
+This example demonstrates the basic usage of the `PageLayout` component with a title and main content.
+
+```jsx
+<PageLayout
+  title="The Martian Frontier - Corporate Inc."
+  pageContent={
+    <div style={{ padding: 'var(--spacing-medium)' }}>
+      <h1 style={{fontSize: 'var(--typography-sizes-heading-h1)', color: 'var(--colors-text-primary)'}}>The Martian Frontier</h1>
+      <p>
+        Corporate Inc. is at the forefront of space exploration, dedicated to establishing a sustainable human presence on Mars.
+      </p>
+    </div>
+  }
+/>
+```
+### With Side Navigation
+In this example, the `PageLayout` includes side navigation, useful for providing inner-page navigation or related content.
+```jsx
+const SideNavigationContent = () => (
+  <div style={{ padding: 'var(--spacing-medium)' }}>
+    <h2>Mars Initiatives</h2>
+    <ul>
+      <li>Ares Program</li>
+      <li>Olympus Mons Base</li>
+    </ul>
+  </div>
+);
+<PageLayout
+  title="Strategic Missions - Corporate Inc."
+  sideNavigation={<SideNavigationContent />}
+  pageContent={
+    <div style={{ padding: 'var(--spacing-medium)' }}>
+      <h1>Our Strategic Missions</h1>
+      <p>
+        Corporate Inc. undertakes a series of interconnected missions to achieve our goal of Martian colonization.
+      </p>
+    </div>
+  }
+/>
+```
+### With Tabs Navigation
+This example showcases the `PageLayout` with tabbed navigation, allowing content to be organized into separate sections.
+```jsx
+const marsOutpostTabs = [
+  {
+    id: 'outpost-alpha',
+    label: 'Outpost Alpha',
+    content: (
+      <div style={{ padding: 'var(--spacing-medium)' }}>
+        <h3>Outpost Alpha: The Pioneer Habitation</h3>
+        <p>
+          Outpost Alpha is our first operational habitat on Mars, designed for long-duration stays and initial geological surveys.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: 'outpost-beta',
+    label: 'Outpost Beta',
+    content: (
+      <div style={{ padding: 'var(--spacing-medium)' }}>
+        <h3>Outpost Beta: R&D Hub</h3>
+        <p>
+          Scheduled for completion in 2045, Outpost Beta will serve as the primary Research & Development center on Mars.
+        </p>
+      </div>
+    ),
+  },
+];
+<PageLayout
+  title="Martian Research Outposts - Corporate Inc."
+  showTabs={true}
+  tabs={marsOutpostTabs}
+  tabsVariant="pills"
+  tabsAlignment="center"
+/>

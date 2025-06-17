@@ -1,0 +1,47 @@
+---
+description: A versatile and accessible button component for Corporate Inc.'s website.
+labels: ['button', 'form', 'navigation']
+---
+
+A versatile and accessible button component that prioritizes user experience and visual consistency.
+
+## Button Appearances
+
+Demonstrates the different appearance options available for the button component: primary, secondary, and tertiary.
+
+```jsx
+<Button appearance="primary" onClick={() => alert('Primary button clicked!')}>
+  Primary Action
+</Button>
+<Button appearance="secondary" onClick={() => alert('Secondary button clicked!')}>
+  Secondary Action
+</Button>
+<Button appearance="tertiary" onClick={() => alert('Tertiary button clicked!')}>
+  Tertiary Action
+</Button>
+```
+## Buttons as Links
+Shows how the button component can be used as a link, both for internal navigation within the site and for external links.
+```jsx
+<Button href="/mars-missions" appearance="primary">
+  Explore Mars Missions (Internal)
+</Button>
+<Button href="https://www.spacex.com" external appearance="secondary">
+  Visit SpaceX (External)
+</Button>
+```
+## Disabled Buttons
+Illustrates the appearance of disabled buttons in primary, secondary and tertiary styles, and demonstrates that the link button does not work when disabled.
+```jsx
+<Button appearance="primary" disabled>
+  Primary Disabled
+</Button>
+<Button appearance="secondary" disabled>
+  Secondary Disabled
+</Button>
+<Button appearance="tertiary" disabled>
+  Tertiary Disabled
+</Button>
+<Button href="/wont-navigate" appearance="primary" disabled>
+  Link Disabled
+</Button>

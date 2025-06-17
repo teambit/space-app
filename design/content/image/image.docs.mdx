@@ -1,0 +1,44 @@
+---
+description: A responsive and visually appealing image component for Corporate Inc.'s website.
+labels: ['image', 'corporate']
+---
+
+The `Image` component enhances Corporate Inc.'s website by providing a flexible and visually appealing way to display images. It supports responsive sizing, loading strategies, and visual enhancements like rounded corners and shadows.
+
+## Mars Rover Schematics
+
+This example displays a schematic for a Mars rover, essential for Corporate Inc.'s exploration efforts.
+
+```jsx
+<Image
+  src="https://images.unsplash.com/photo-1473091534298-04dcbce3278c?ixid=M3w3MDc2NDF8MHwxfHNlYXJjaHw0fHxzcGFjZSUyMHRlY2hub2xvZ3klMjBjb3Jwb3JhdGV8ZW58MXwwfHxibHVlfDE3NDcyMjMxNDV8MA&ixlib=rb-4.1.0"
+  alt="Digital tablet displaying schematics for a Mars rover, vital for Corporate Inc.'s exploration."
+  width="400"
+/>
+```
+## Orbital Research Drone
+This example showcases an advanced drone used for Corporate Inc.'s orbital and atmospheric research, demonstrating the use of `objectFit`, `borderRadius`, and `shadow` properties.
+```jsx
+<Image
+  src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?ixid=M3w3MDc2NDF8MHwxfHNlYXJjaHw1fHxzcGFjZSUyMHRlY2hub2xvZ3klMjBjb3Jwb3JhdGV8ZW58MXwwfHxibHVlfDE3NDcyMjMxNDV8MA&ixlib=rb-4.1.0"
+  alt="Advanced drone technology, representing Corporate Inc.'s orbital and atmospheric research vehicles."
+  width="450"
+  height="300"
+  objectFit="cover"
+  borderRadius="medium"
+  shadow="medium"
+/>
+```
+## Contained Launch System Image
+Here, an artistic depiction of a rocket launch trail symbolizes Corporate Inc.'s launch capabilities. The example uses `objectFit="contain"` and custom styles for background color, alongside `borderRadius` and `shadow` adjustments.
+```jsx
+<Image
+  src="https://images.unsplash.com/photo-1516801967339-cb50a3ce7781?ixid=M3w3MDc2NDF8MHwxfHNlYXJjaHw5fHxzcGFjZSUyMHRlY2hub2xvZ3klMjBjb3Jwb3JhdGV8ZW58MXwwfHxibHVlfDE3NDcyMjMxNDV8MA&ixlib=rb-4.1.0"
+  alt="Artistic depiction of a rocket launch trail, symbolizing Corporate Inc.'s launch capabilities."
+  width="450"
+  height="300"
+  objectFit="contain"
+  borderRadius="small"
+  shadow="none"
+  style={{ backgroundColor: 'var(--colors-surface-tertiary)' }}
+/>

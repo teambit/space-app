@@ -1,0 +1,60 @@
+---
+description: 'A custom React development environment for Corporate Inc., tailored for building components for a space technology company website.'
+labels: ['env', 'react', 'dev', 'vite', 'vitest', 'typescript', 'corporate', 'space-tech']
+---
+
+A reusable development environment for React components at Corporate Inc.
+This environment is configured to support the development of modern, high-tech user interfaces for our space technology initiatives, including our vision to populate Mars.
+It integrates the Corporate Theme for consistent branding and provides a suite of development tools.
+
+Features:
+- ▶️ TypeScript for robust and maintainable code.
+- 🧪 Vitest for fast and efficient unit and component testing.
+- 🎨 Integration with `@corporate/design.corporate-theme` for consistent styling and theming across all components.
+- 🧑‍💻 Generator templates for React UI components, hooks, and applications.
+- 🚀 Optimized build pipeline for React applications.
+- 🦋 ESLint and Prettier for code quality and consistency.
+- 👓 Component previews configured with the Corporate Theme.
+
+## Use in existing workspaces
+
+Add this development environment to your `workspace.jsonc` file to make its generators available:
+
+```json
+{
+  "teambit.generator/generator": {
+    "envs": [
+      "my-org.my-scope/corporate-env"
+    ]
+  }
+}
+```
+Replace `my-org.my-scope` with the actual scope where this environment component is hosted.
+You can then see the available generator templates using `bit templates`.
+## Use on an existing component
+To apply this environment to an existing component, run the following command:
+```shell
+bit env set your-component-name my-org.my-scope/corporate-env
+```
+## Create a new React workspace based on this environment
+You can create a new React workspace scaffolded with this environment using:
+```shell
+bit new react my-corporate-workspace --aspect my-org.my-scope/corporate-env
+```
+## Customizing this Environment
+This environment can be extended or customized. To create your own environment based on this one:
+```shell
+bit create react-env my-custom-corporate-env --scope your-scope-name
+```
+In your new environment file (e.g., `my-custom-corporate-env.bit-env.ts`), ensure your class extends `CorporateEnv`:
+```typescript
+import { CorporateEnv } from '@my-org/my-scope.corporate-env'; // Adjust import path
+export class MyCustomCorporateEnv extends CorporateEnv {
+  name = 'my-custom-corporate-env';
+  // Override methods or properties as needed
+  // For example, to change the ESLint configuration:
+  // protected eslintConfigPath = require.resolve('./config/my-custom-eslint.cjs');
+}
+export default new MyCustomCorporateEnv();
+```
+This allows you to inherit the base configurations for Corporate Inc. while tailoring specific aspects to different project needs.

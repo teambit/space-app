@@ -1,0 +1,113 @@
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --spinner-color: var(--colors-primary-default);
+  --spinner-secondary-color: var(--colors-tertiary-default);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: var(--interactions-z-index-overlay);
+}
+
+.spinnerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.orbitRing {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: var(--spinner-color);
+  border-left-color: var(--spinner-secondary-color);
+  animation: spin 1.5s linear infinite;
+}
+
+.orbitRing::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: var(--spinner-secondary-color);
+  animation: spin 2s linear infinite reverse;
+}
+
+.planetCore {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--spinner-color), var(--spinner-secondary-color));
+  box-shadow: 0 0 8px var(--spinner-color);
+}
+
+.loadingText {
+  margin-top: 12px;
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-sizes-body-small);
+  color: var(--colors-text-secondary);
+  letter-spacing: var(--typography-letter-spacing-wide);
+  text-transform: uppercase;
+  animation: fadeInOut 1.5s infinite ease-in-out;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 3px var(--spinner-color));
+  }
+  50% {
+    filter: drop-shadow(0 0 8px var(--spinner-color));
+  }
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .spinner {
+    transform: scale(0.8);
+  }
+  
+  .loadingText {
+    font-size: calc(var(--typography-sizes-body-small) * 0.9);
+  }
+}

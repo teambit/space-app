@@ -1,0 +1,152 @@
+.flex {
+  display: flex;
+  box-sizing: border-box;
+  
+  // Default spacing
+  padding: 0;
+  margin: 0;
+}
+
+// Direction modifiers
+.directionRow {
+  flex-direction: row;
+}
+
+.directionColumn {
+  flex-direction: column;
+}
+
+.directionRowReverse {
+  flex-direction: row-reverse;
+}
+
+.directionColumnReverse {
+  flex-direction: column-reverse;
+}
+
+// Wrap modifiers
+.wrapNowrap {
+  flex-wrap: nowrap;
+}
+
+.wrapWrap {
+  flex-wrap: wrap;
+}
+
+.wrapWrapReverse {
+  flex-wrap: wrap-reverse;
+}
+
+// Justify content modifiers
+.justifyFlexStart {
+  justify-content: flex-start;
+}
+
+.justifyFlexEnd {
+  justify-content: flex-end;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifySpaceBetween {
+  justify-content: space-between;
+}
+
+.justifySpaceAround {
+  justify-content: space-around;
+}
+
+.justifySpaceEvenly {
+  justify-content: space-evenly;
+}
+
+// Align items modifiers
+.alignFlexStart {
+  align-items: flex-start;
+}
+
+.alignFlexEnd {
+  align-items: flex-end;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.alignStretch {
+  align-items: stretch;
+}
+
+.alignBaseline {
+  align-items: baseline;
+}
+
+// Gap modifiers
+.gapXxs {
+  gap: var(--spacing-xxs);
+}
+
+.gapXs {
+  gap: var(--spacing-xs);
+}
+
+.gapSmall {
+  gap: var(--spacing-small);
+}
+
+.gapDefault {
+  gap: var(--spacing-default);
+}
+
+.gapMedium {
+  gap: var(--spacing-medium);
+}
+
+.gapLarge {
+  gap: var(--spacing-large);
+}
+
+.gapXl {
+  gap: var(--spacing-xl);
+}
+
+.gapXxl {
+  gap: var(--spacing-xxl);
+}
+
+.gapXxxl {
+  gap: var(--spacing-xxxl);
+}
+
+// Additional modifiers
+.inline {
+  display: inline-flex;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+// Responsive behavior
+@media (max-width: 480px) {
+  .flex {
+    // Adjust for mobile devices
+    padding: 0;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
+  .flex {
+    // Adjust for tablet devices
+    padding: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .flex {
+    // Adjust for desktop devices
+    padding: 0;
+  }
+}
