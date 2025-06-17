@@ -12,8 +12,8 @@ Browse the components on the [Bit Cloud example organization](https://bit.cloud/
 
 ## ✨ Features
 
-* **[Design system](https://bit.cloud/infinity/design):** Browse the [platform design system components](https://bit.cloud/infinity/design/~components). Each as standalone reusable package.
-* **[Space corporate application](https://bit.cloud/infinity/products):** Secure sign-up and login to enable voting and submissions.
+* **[Design system](https://bit.cloud/corporate/design):** Browse the [application design system components](https://bit.cloud/corporate/design/~components). Each as standalone reusable package.
+* **[Space corporate application](https://bit.cloud/corporate/corporate-website):** A space tech company website with pages and sections. Includes responsive design.
 
 ---
 
