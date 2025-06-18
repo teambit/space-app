@@ -27,7 +27,7 @@
     /**
      * default scope for all components in workspace.
      **/
-    "defaultScope": "my-scope",
+    "defaultScope": "corporate.corporate-website",
     "resolveAspectsFromNodeModules": true,
     "resolveEnvsFromRoots": true
   },
